@@ -34,9 +34,22 @@
 
 (defn ul-li-list
   []
-  [:ul (map #(vector :li %) (range 5))])
+  [:ul.media-list (map #(vector :li.media %) (range 5))])
+
+(defn media-pull-right
+  []
+  [:div.media
+   [:div.media-body
+    [:h4.media-heading "媒体图片"]
+    [:div "........."]]
+   [:a.pull-right>img.media-object
+    {:src "./img/post-bg.jpg"
+     :style {:width "50%"
+             :height "50%"
+             :float "right"}}]])
 
 (reagent/render-component
- [#_(fn []
-      ) hello-world]
+ [(fn []
+    
+    ) #_hello-world]
  (. js/document (getElementById "app")))
