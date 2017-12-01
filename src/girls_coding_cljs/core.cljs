@@ -32,6 +32,10 @@
   []
   [:ul.list-group>li.list-group-item "导航栏" [:span.badge "徽章1"]])
 
+(defn ul-li-list
+  []
+  [:ul (map #(vector :li %) (range 5))])
+
 (reagent/render-component
  [#_(fn []
       ) hello-world]
